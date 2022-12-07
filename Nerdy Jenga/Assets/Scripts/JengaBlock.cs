@@ -2,6 +2,7 @@ using Photon.Pun;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Experimental.GlobalIllumination;
 
 public class JengaBlock : MonoBehaviourPunCallbacks
 {
@@ -12,17 +13,42 @@ public class JengaBlock : MonoBehaviourPunCallbacks
     public Material workMaterial;
     public Material loveMaterial;
     public Material selfMaterial;
+    public int value;
+    int roomValue = 0;
+    public Rigidbody rb;
+    public float fallValue = 1;
+    public bool fall = false;
+    public GameObject boom;
 
     private void Awake()
     {
+        rb = GetComponent<Rigidbody>();
         view = GetComponent<PhotonView>();
         meshRenderer = GetComponent<MeshRenderer>();
+        roomValue = (int)PhotonNetwork.CurrentRoom.CustomProperties["KEY"];
     }
 
     private void Start()
     {
-        blockType = (Helper.BlockType)Random.Range(0, 4);
+        boom = PhotonView.FindObjectOfType<EndGame>().gameObject;
+        //blockType = (Helper.BlockType)Random.Range(0, 4);
+        value = (roomValue % value) % 4;
+        blockType = (Helper.BlockType)value;
         meshRenderer.material = SetMaterial(blockType);
+    }
+
+    private void Update()
+    {
+        if (rb.velocity.magnitude >= fallValue)
+        {
+            view.RPC(nameof(EndGame), RpcTarget.AllBuffered);
+        }
+    }
+
+    [PunRPC]
+    void EndGame()
+    {
+        boom.transform.GetChild(0).gameObject.SetActive(true);
     }
 
     public Material SetMaterial(Helper.BlockType blockType = Helper.BlockType.Family)

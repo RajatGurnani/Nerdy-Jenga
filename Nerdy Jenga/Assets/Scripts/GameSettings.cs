@@ -9,9 +9,4 @@ public class GameSettings : MonoBehaviour
         Application.targetFrameRate = 60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
-
-    void Start()
-    {
-
-    }
 }

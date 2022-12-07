@@ -13,6 +13,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks
 
     public void Connect()
     {
+        PhotonNetwork.NickName = Identification.Instance.userName;
         PhotonNetwork.ConnectUsingSettings();
     }
 
