@@ -21,7 +21,7 @@ public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
     public void CreateRoom()
     {
         RoomOptions room = new RoomOptions();
-        room.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable { { KEY, Random.Range(0, 10000) } };
+        room.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable { { KEY, Random.Range(0, 10000) }, { "Turn", "" } };
         PhotonNetwork.CreateRoom(roomName.text, room);
     }
 

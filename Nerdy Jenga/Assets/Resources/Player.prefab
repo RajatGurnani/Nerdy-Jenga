@@ -48,6 +48,10 @@ MonoBehaviour:
   view: {fileID: 0}
   cam: {fileID: 0}
   gameController: {fileID: 0}
+  myturn: 0
+  nickName: 
+  startGame: {fileID: 0}
+  playerList: []
 --- !u!114 &6407509345709732324
 MonoBehaviour:
   m_ObjectHideFlags: 0

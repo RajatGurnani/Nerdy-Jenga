@@ -31,7 +31,6 @@ public class JengaBlock : MonoBehaviourPunCallbacks
     private void Start()
     {
         boom = PhotonView.FindObjectOfType<EndGame>().gameObject;
-        //blockType = (Helper.BlockType)Random.Range(0, 4);
         value = (roomValue % value) % 4;
         blockType = (Helper.BlockType)value;
         meshRenderer.material = SetMaterial(blockType);

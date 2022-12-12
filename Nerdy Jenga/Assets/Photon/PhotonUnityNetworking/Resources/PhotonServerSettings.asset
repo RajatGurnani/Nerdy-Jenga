@@ -34,16 +34,20 @@ MonoBehaviour:
   RunInBackground: 1
   StartInOfflineMode: 0
   RpcList:
+  - ChangeTurn
   - ClickRpc
+  - ConnectNewPlayer
   - DestroyRpc
   - DestroySpaceship
-  - Fire
-  - RespawnSpaceship
-  - SetMaterial
-  - SetText
   - DisableBlock
   - EndGame
+  - Fire
   - GameOver
+  - RespawnSpaceship
+  - SetMaterial
+  - SetSpawnManager
+  - SetText
+  - StartTurn
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0
