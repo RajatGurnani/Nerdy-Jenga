@@ -50,7 +50,7 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
         foreach (var item in players)
         {
             names.Add(item.NickName);
-            playerNamesText.text += item.NickName + " ";
+            playerNamesText.text += $"\u2022<indent=1em> {item.NickName} </indent>\n";
         }
     }
 
@@ -86,7 +86,7 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
     }
 
     [PunRPC]
-    public void SetSpawnManager( )
+    public void SetSpawnManager()
     {
         UpdatePlayerList();
         playerQueue = new(playerList);

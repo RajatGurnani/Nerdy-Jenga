@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ce91059023deb4e9bdf05cd5105295, type: 3}
+  m_Name: Family Question Bank
+  m_EditorClassIdentifier: 
+  question:
+  - What do you think is the right amount of time to spend with family?
+  - Do you spend the right amount of time with your family?
+  - Would you like to have a family?
+  - How might you be a problematic parent?
+  - Who do you feel closest to in your family?
+  - Describe why you feel closest to this person.
+  - Are you still reliant on your parents? Emotionally, financially or both?
+  - How does your dependence on (or independence from) your parents affect your relationship with them?
+  - Growing up, were you ever jealous, if only briefly, of a different family?
+  - Describe the family you were jealous of when you were a child,
+  - What's your earliest childhood memory?
+  - Why do you think you ve held on to a particular childhood memory?
+  - What positive characteristics do you think you have inherited from your family?
+  - "What are the negative characteristics you've inherited from your family?"
+  - Do you have any peculiar family traditions?
+  - What still embarrasses you about your parents?
+  - Have you ever hidden something from your family?
+  - What did you hide from your family, and why did you decide to hide it?
+  - Growing up, were your parents too strict, or too permissive?
+  - How might this influence your future parenting style/methods?
+  - How have/ did your parents show you their support and love?
+  - How might your parents have let you down?
+  - What do you blame your family for?
+  - What might your family blame you for?
+  - Which member of your family would you say is the most successful?
+  - Do you think the most successful member of your family deserves their success?
+  - Would you say you are(or were) friends with your parents?
+  - What tensions remain between you and your parents?
+  - Do you understand your parents better now that you are older?
+  - Is there anything you still don't understand about your parents?
+  - What was your mother's role around the home when you were little? And your father's?
+  - What influence did your mother and father's housekeeping roles have on you as an adult?
+  - What do you admire about one of your siblings?
+  - Have you ever felt jealous of a sibling?
+  - Do you think youre a good son/daughter?
+  - How are you a bad son/daughter?
+  - Have you ever lost a parent or relative?
+  - What would you want to tell them if you could?
+  - Are your parents separated, or still together?
+  - Why did your parents split up or remain married?
+  - Do you feel you share the same values as your parents?
+  - What values do you have that your parents don't?
+  - Are there any members of your family who annoy you?
+  - Are there any members of your family you would avoid if they were not related to you?
+  - When you were young how did you act out against your parents?
+  - Looking back, what were you angry with your parents about?
+  - As a child did you fight with your siblings?
+  - As an adult, do you squabble with your siblings? How?

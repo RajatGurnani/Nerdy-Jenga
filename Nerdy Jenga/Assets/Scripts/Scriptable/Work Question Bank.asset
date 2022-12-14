@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ce91059023deb4e9bdf05cd5105295, type: 3}
+  m_Name: Work Question Bank
+  m_EditorClassIdentifier: 
+  question:
+  - "What\u2019s your position on office romances?"
+  - Name a colleague you've had a crush on
+  - What might your colleagues be surprised to learn about your behaviour outside
+    of work?
+  - What might you not want your employers to learn about your behaviour outside
+    of work?
+  - "Have you ever complained about a colleague\u2019s behaviour?"
+  - Has anyone complained about your behaviour in the workplace?
+  - Do you enjoy social events at work?
+  - What are you secretly thinking during work social events?
+  - Have you ever been hungover at work?
+  - Did you admit your hangover or try to keep it a secret?
+  - Do you prefer to work as a part of a team or on a solo project?
+  - How is your love of either team or solo work reflected in your social life?
+  - "What\u2019s been your biggest work achievement?"
+  - What's the biggest mistake you've ever made at work?
+  - What would your dream job be?
+  - What's preventing you from acting on your dreams?
+  - Which colleague have you learnt the most from in your career?
+  - "Describe the worst boss you\u2019ve ever had."
+  - Would you say your employer prioritizes profit over employee happiness?
+  - If you were the head of an organization, would you prioritize employee happiness
+    over profit?
+  - Given the authority, what changes would you make to your current work week?
+  - What sets off your tendency to procrastinate?
+  - Which past or current work colleague do you hope to emulate?
+  - Which colleague do you secretly resent?
+  - Do you ever work outside of work/office hours?
+  - Which is the bigger priority - your work or your social life?
+  - In what ways might your performance at work be overrated?
+  - "Do you ever feel as if you don\u2019t deserve your success?"
+  - Do you consider any of your colleagues to be genuine friends?
+  - Who do you gossip about at work?
+  - Would you say your job makes a positive difference in the world?
+  - In what way is your job a bit futile?
+  - Have you ever had a disastrous job interview?
+  - Have you ever been fired or made redundant from a job?
+  - "Do you think it\u2019s important to choose a job that aligns with your personal
+    values?"
+  - How do your personal values align with your current role?
+  - What personal quality would you say has helped you advance in your career?
+  - What personal quality would you say has held you back in your career?
+  - If you could work entirely from home, would you?
+  - Would you be more productive, or less, if you worked from home?
+  - If you could choose, what luxury would you install at your workplace?
+  - Have you ever stolen supplies from work? What were they?
+  - If you could retire tomorrow, would you?
+  - How will you find daily fulfillment and purpose when you are retired?
+  - What do you value more - money or job satisfaction?
+  - In what ways might your choice(money or job satisfaction) be causing you difficulties
+    in your life?
+  - Do you feel undervalued at work?
+  - In what ways do you underperform at work?

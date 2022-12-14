@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ce91059023deb4e9bdf05cd5105295, type: 3}
+  m_Name: Love Question Bank
+  m_EditorClassIdentifier: 
+  question:
+  - When in a relationship, how much forward planning do you do?
+  - Have you ever planned out a life with someone you have only just met?
+  - What lessons about relationships did you learn from your parents?
+  - Describe how your current(or a previous) partner resembles one of your parents
+  - "What\u2019s your position on polyamory?"
+  - Have you ever been involved with more than one person at once?
+  - "Is it important to know your partner\u2019s romantic history?"
+  - "Have you ever felt insecure about a partner\u2019s past relationships?"
+  - What's the most romantic gesture you've ever made?
+  - What romantic gesture/overture are you now quite embarrassed to think about?
+  - Who was your first love?
+  - Who was the first person to break your heart?
+  - Do you believe in love at first sight?
+  - What physical features of someone draw you in immediately?
+  - Is there a difference between love and infatuation?
+  - Have you ever had an unhealthy attachment to someone?
+  - Have you ever been secretly a bit attracted to someone you probably should have
+    been?
+  - Have you ever acted on this attraction?
+  - Within what age range would you consider dating?
+  - Have you ever had a crush on someone rather too senior or junior for you?
+  - Do you think infidelity is ever forgivable?
+  - Have you ever considered cheating on a partner?
+  - What do you wish you had learnt sooner about a previous partner?
+  - Have you ever regretted your behaviour in a relationship?
+  - Do you think infidelity involves only physical intimacy?
+  - "Have you ever been \u2018virtually\u2019 unfaithful to a partner by getting
+    emotionally close online to someone else?"
+  - Do you believe in marriage?
+  - What are your misgivings about marriage?
+  - Do you get jealous in relationships?
+  - Have you ever suspected a partner of being unfaithful?
+  - Have you ever had a crush on a celebrity?
+  - Have you ever had a crush on an authority figure?
+  - In relationships, do you generally take charge, or follow orders?
+  - Why do you think you need control or submission?
+  - Have you ever felt reluctant to introduce a new partner to your friends or family?
+  - Explain why you might feel reluctant to show off a new partner to friends or
+    family
+  - How soon after the end of a long-term relationship would you consider dating?
+  - Have you ever struggled to get over a partner?
+  - Would you consider dating someone with different political beliefs from your
+    own?
+  - What might you find strangely attractive about someone whose beliefs you found
+    abhorrent?
+  - "Do you think you have influenced a partner\u2019s behaviour or character?"
+  - Do you think you have changed your own behaviour or character during a relationship?
+  - How does modern dating differ from how you met your current(or a past) partner?
+  - If you decided not to continue dating someone, how would you end the relationship?
+  - "Do you think it\u2019s possible to be completely open and honest with a partner?"
+  - What secrets are you keeping/have you kept from a partner?
+  - What unusual quality do you find attractive in other people?
+  - Have you ever been attracted to someone that you shouldn't have focussed on?

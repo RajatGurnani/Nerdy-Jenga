@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6407509345709732325
 MonoBehaviour:
@@ -48,10 +48,20 @@ MonoBehaviour:
   view: {fileID: 0}
   cam: {fileID: 0}
   gameController: {fileID: 0}
-  myturn: 0
   nickName: 
   startGame: {fileID: 0}
   playerList: []
+  familyQuestions: {fileID: 11400000, guid: cf0f7caa4c0f848429e7b67f5660d5d9, type: 2}
+  workQuestions: {fileID: 11400000, guid: b299fb7e64dce694eb16e375003c1f6a, type: 2}
+  selfQuestions: {fileID: 11400000, guid: c020917eae441d44f9e90804fc2b031c, type: 2}
+  loveQuestions: {fileID: 11400000, guid: fb4c39371060de547ad7f9bcc9842272, type: 2}
+  familyList: 
+  workList: 
+  selfList: 
+  loveList: 
+  temp: 0
+  answered: 0
+  questionsHolder: {fileID: 0}
 --- !u!114 &6407509345709732324
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ MonoBehaviour:
   RunInBackground: 1
   StartInOfflineMode: 0
   RpcList:
+  - AskQuestionToAll
   - ChangeTurn
   - ClickRpc
   - ConnectNewPlayer
@@ -48,6 +49,12 @@ MonoBehaviour:
   - SetSpawnManager
   - SetText
   - StartTurn
+  - StopQuestionToAll
+  - SyncValues
+  - UpdateFamily
+  - UpdateLove
+  - UpdateSelf
+  - UpdateWork
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

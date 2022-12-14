@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ce91059023deb4e9bdf05cd5105295, type: 3}
+  m_Name: Self Question Bank
+  m_EditorClassIdentifier: 
+  question:
+  - What do you like about yourself?
+  - "What negative thoughts do you have about yourself when you\u2019re down?"
+  - What did you like to dress up as when you were a child?
+  - What do you think your early dressing-up choice says about you as a person?
+  - How did your past help you to be who you are today?
+  - How has your past hindered you in the present?
+  - Which of the following places scares you the most? A)Parties; B)Dark alleyways;
+    C)Hospitals; D)Foreign countries
+  - What do you fear might happen to you in the places that scare you the most?
+  - Have you ever felt paranoid?
+  - Give an example of when and why you felt paranoid.
+  - Do you have a strong sense of right and wrong?
+  - Have you ever violated your own moral code?
+  - What do you think is your best personality trait?
+  - What part of you do you feel needs the most work?
+  - "Complete this sentence:\u2019 I have an irrational fear of\u2026.\u2019"
+  - "Complete this sentence:\u2019 I have an irrational hatred of\u2026.\u2019"
+  - What positive attribute do you hope your friends recognize in you?
+  - What negative thoughts do you worry your friends have about you?
+  - Describe an early happy memory
+  - "Describe an early memory you don\u2019t like to think too much about"
+  - Do you think you are an anxious person?
+  - What causes your anxieties? And how do you overcome them?
+  - How do you think your friends would describe you?
+  - Do you think you are truly yourself with your friends or do you play a character?
+  - "Are there circumstances in which it\u2019s okay to lie to those closest to you?"
+  - When was the last time you lied?
+  - Do you find it easy or difficult to open up emotionally?
+  - When was the last time you cried, and over what?
+  - Which places or great works of art do you still want to experience?
+  - What places or great works of art do you not understand?
+  - What prejudices do you hold?
+  - Have you had an experience that might have contributed to your prejudices?
+  - Do you have any unusual personal habits?
+  - Do you have any unsavoury personal habits?
+  - Do you hold any religious beliefs?
+  - What experiences in your life caused your belief system to develop/change?
+  - How easily do you lose your temper?
+  - "What\u2019s the worst thing you\u2019ve ever done out of anger?"
+  - Did you have an imaginary friend as a child?
+  - Describe how you think you benefited from your relationship with your early imaginary
+    friend
+  - Would you say you are addicted to anything?
+  - What are you trying to escape through your addiction?
+  - What were you like as a child?
+  - How might the child in you be disappointed by your life as an adult?
+  - What are your biggest passions?
+  - What things in your life may make it difficult to regularly pursue your passions?
+  - Have you ever suffered from insomnia?
+  - What specific things keep you awake at night?

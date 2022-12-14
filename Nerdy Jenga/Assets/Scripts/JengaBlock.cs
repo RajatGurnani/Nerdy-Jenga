@@ -40,14 +40,19 @@ public class JengaBlock : MonoBehaviourPunCallbacks
     {
         if (rb.velocity.magnitude >= fallValue)
         {
-            view.RPC(nameof(EndGame), RpcTarget.AllBuffered);
+            Invoke(nameof(InvokeDelayEndGame), 1f);
         }
+    }
+
+    public void InvokeDelayEndGame()
+    {
+        view.RPC(nameof(EndGame), RpcTarget.AllBuffered);
     }
 
     [PunRPC]
     void EndGame()
     {
-        boom.transform.GetChild(0).gameObject.SetActive(true);
+        boom.transform.GetChild(2).gameObject.SetActive(true);
     }
 
     public Material SetMaterial(Helper.BlockType blockType = Helper.BlockType.Family)
