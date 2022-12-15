@@ -8,7 +8,6 @@ public class LoginUI : MonoBehaviour
 {
     public InputField field;
     public TMP_Text outputText;
-    public TMP_Text errorText;
     Identification identification;
     public ConnectToServer connectToServer;
 
@@ -21,7 +20,7 @@ public class LoginUI : MonoBehaviour
     {
         if (field.text == "")
         {
-            errorText.text = "Error: Invalid User Name";
+            outputText.text = "Error: Invalid User Name";
             return;
         }
 
@@ -32,6 +31,6 @@ public class LoginUI : MonoBehaviour
 
     public void ClearErrorOnType()
     {
-        errorText.text = "";
+        outputText.text = "";
     }
 }

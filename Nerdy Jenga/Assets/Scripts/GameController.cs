@@ -4,16 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
     string playerName = "";
     public TMP_Text playerText;
     public GameObject gameplayScreen;
-    public TMP_Text questionText;
     public PhotonView view;
     public bool questionAsked = false;
     public List<Player> players=new();
+
+    [Header("Question Panel")]
+    public Image questionBG;
+    public TMP_Text questionTypeText;
+    public TMP_Text questionDescriptionText;
+    public Sprite familySprite;
+    public Sprite loveSprite;
+    public Sprite workSprite;
+    public Sprite selfSprite;
+
     public void UpdatePlayerName(string _name)
     {
         view = GetComponent<PhotonView>();
@@ -31,9 +41,9 @@ public class GameController : MonoBehaviour
         Player.BlocksFell -= UpdatePlayerName;
     }
 
-    public void AskQuestion(string ques)
+    public void AskQuestion(Helper.BlockType _block,string ques)
     {
-        view.RPC(nameof(AskQuestionToAll), RpcTarget.AllBuffered, ques);
+        view.RPC(nameof(AskQuestionToAll), RpcTarget.AllBuffered,_block,ques);
         //gameplayScreen.SetActive(true);
         //questionText.text = ques;
     }
@@ -46,7 +56,7 @@ public class GameController : MonoBehaviour
             Debug.Log("in loop");
             if (player.nickName == PhotonNetwork.NickName)
             {
-                questionText.text = "answered";
+                questionDescriptionText.text = "answered";
                 player.answered= true;
             }
             if (player.answered == false)
@@ -59,12 +69,30 @@ public class GameController : MonoBehaviour
     }
 
     [PunRPC]
-    public void AskQuestionToAll(string question)
+    public void AskQuestionToAll(Helper.BlockType _block,string question)
     {
+        questionTypeText.text = _block.ToString();
+        switch (_block)
+        {
+            case Helper.BlockType.Family:
+                questionBG.sprite = familySprite;
+                break;
+            case Helper.BlockType.Work:
+                questionBG.sprite = workSprite;
+                break;
+            case Helper.BlockType.Love:
+                questionBG.sprite = loveSprite;
+                break;
+            case Helper.BlockType.Self:
+                questionBG.sprite = selfSprite;
+                break;
+            default:
+                break;
+        }
         players = FindObjectsOfType<Player>().ToList();
         questionAsked = true;
         gameplayScreen.SetActive(true);
-        questionText.text = question;
+        questionDescriptionText.text = question;
     }
 
     [PunRPC]
@@ -77,6 +105,6 @@ public class GameController : MonoBehaviour
         }
         questionAsked = false;
         gameplayScreen.SetActive(false);
-        questionText.text = "";
+        questionDescriptionText.text = "";
     }
 }

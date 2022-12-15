@@ -24,7 +24,7 @@ public class JengaBlock : MonoBehaviourPunCallbacks
     {
         rb = GetComponent<Rigidbody>();
         view = GetComponent<PhotonView>();
-        meshRenderer = GetComponent<MeshRenderer>();
+        //meshRenderer = GetComponent<MeshRenderer>();
         roomValue = (int)PhotonNetwork.CurrentRoom.CustomProperties["KEY"];
     }
 

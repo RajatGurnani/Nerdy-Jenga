@@ -113,7 +113,7 @@ public class Player : MonoBehaviourPunCallbacks
                 ques = questionsHolder.selfQuestions.question[temp];
                 break;
         }
-        gameController.AskQuestion(ques);
+        gameController.AskQuestion(_block,ques);
         questionsHolder.view.RPC(nameof(questionsHolder.SyncValues), RpcTarget.AllBuffered, _block, temp);
     }
 

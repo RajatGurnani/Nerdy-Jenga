@@ -355,7 +355,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 491763106}
   - component: {fileID: 491763105}
   m_Layer: 5
-  m_Name: Holder
+  m_Name: Title and name Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +531,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 400, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &491763105
 MonoBehaviour:
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
+  m_HorizontalFit: 2
   m_VerticalFit: 2
 --- !u!114 &491763106
 MonoBehaviour:
@@ -605,8 +605,8 @@ RectTransform:
   m_Children:
   - {fileID: 15502098}
   - {fileID: 1201267356}
-  - {fileID: 45336922}
   - {fileID: 1323196638}
+  - {fileID: 45336922}
   m_Father: {fileID: 657366764}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -614,7 +614,7 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494769880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
-  m_VerticalFit: 2
+  m_VerticalFit: 0
 --- !u!114 &494769881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 30
+  m_Spacing: 50
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
@@ -909,7 +909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   field: {fileID: 15502099}
   outputText: {fileID: 1323196640}
-  errorText: {fileID: 45336920}
   connectToServer: {fileID: 1588403099}
 --- !u!1 &705507993
 GameObject:
