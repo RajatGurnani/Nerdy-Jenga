@@ -24,6 +24,15 @@ public class GameController : MonoBehaviour
     public Sprite workSprite;
     public Sprite selfSprite;
 
+    public Button answerButton;
+    public TMP_Text readyText;
+    public StartGame startGame;
+
+    private void Start()
+    {
+        startGame=FindObjectOfType<StartGame>();
+    }
+
     public void UpdatePlayerName(string _name)
     {
         view = GetComponent<PhotonView>();
@@ -68,6 +77,32 @@ public class GameController : MonoBehaviour
         view.RPC(nameof(StopQuestionToAll), RpcTarget.AllBuffered);
     }
 
+    public void QuestionAnswered()
+    {
+        ReadyCheck[] readyChecks = FindObjectsOfType<ReadyCheck>();
+        readyText.text = "";
+
+        foreach (var check in readyChecks)
+        {
+            if (check.answered)
+            {
+                readyText.text += $"\u2022<indent=1em> <color=green>{check.view.Owner.NickName}</color> </indent>\n";
+            }
+            else
+            {
+                readyText.text += $"\u2022<indent=1em> <color=red>{check.view.Owner.NickName}</color> </indent>\n";
+            }
+        }
+        foreach (var check in readyChecks)
+        {
+            if (check.answered == false)
+            {
+                return;
+            }
+        }
+        view.RPC(nameof(StopQuestionToAll), RpcTarget.AllBuffered);
+    }
+
     [PunRPC]
     public void AskQuestionToAll(Helper.BlockType _block,string question)
     {
@@ -93,11 +128,14 @@ public class GameController : MonoBehaviour
         questionAsked = true;
         gameplayScreen.SetActive(true);
         questionDescriptionText.text = question;
+        QuestionAnswered();
+        startGame.turnText.gameObject.SetActive(false);
     }
 
     [PunRPC]
     public void StopQuestionToAll()
     {
+        readyText.text = "";
         Player[] players = FindObjectsOfType<Player>();
         foreach (Player player in players)
         {
@@ -106,5 +144,13 @@ public class GameController : MonoBehaviour
         questionAsked = false;
         gameplayScreen.SetActive(false);
         questionDescriptionText.text = "";
+        answerButton.gameObject.SetActive(true);
+
+        ReadyCheck[] readyChecks = FindObjectsOfType<ReadyCheck>();
+        foreach (var check in readyChecks)
+        {
+            check.view.RPC(nameof(check.ResetAnswer),RpcTarget.AllBuffered);
+        }
+        startGame.turnText.gameObject.SetActive(true);
     }
 }

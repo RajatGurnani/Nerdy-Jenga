@@ -55,6 +55,11 @@ MonoBehaviour:
   - UpdateLove
   - UpdateSelf
   - UpdateWork
+  - EnablePlayer
+  - StartGameWithPlayers
+  - SyncPlayerNames
+  - AnswerRPC
+  - ResetAnswer
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

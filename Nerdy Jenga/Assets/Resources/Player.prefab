@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6407509345709732326}
   - component: {fileID: 6407509345709732325}
   - component: {fileID: 6407509345709732324}
+  - component: {fileID: 6018520419316093361}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -40,7 +41,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6407509345709732123}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c39c9622a4c152f4d8f39aade7ab4be4, type: 3}
   m_Name: 
@@ -51,14 +52,6 @@ MonoBehaviour:
   nickName: 
   startGame: {fileID: 0}
   playerList: []
-  familyQuestions: {fileID: 11400000, guid: cf0f7caa4c0f848429e7b67f5660d5d9, type: 2}
-  workQuestions: {fileID: 11400000, guid: b299fb7e64dce694eb16e375003c1f6a, type: 2}
-  selfQuestions: {fileID: 11400000, guid: c020917eae441d44f9e90804fc2b031c, type: 2}
-  loveQuestions: {fileID: 11400000, guid: fb4c39371060de547ad7f9bcc9842272, type: 2}
-  familyList: 
-  workList: 
-  selfList: 
-  loveList: 
   temp: 0
   answered: 0
   questionsHolder: {fileID: 0}
@@ -84,3 +77,24 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &6018520419316093361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407509345709732123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d768755312209e40899ecd7db8bbc5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6407509345709732325}
+  nickName: 
+  readyInLobby: 0
+  readyPreGameButton: {fileID: 0}
+  questionAnswerButton: {fileID: 0}
+  readyCanvas: {fileID: 0}
+  view: {fileID: 0}
+  controller: {fileID: 0}
+  answered: 0

@@ -20,16 +20,6 @@ public class Player : MonoBehaviourPunCallbacks
     public List<string> playerList = new();
     public Photon.Realtime.Player turnPlayer;
 
-    public Questions familyQuestions;
-    public Questions workQuestions;
-    public Questions selfQuestions;
-    public Questions loveQuestions;
-
-    public List<int> familyList = new();
-    public List<int> workList = new();
-    public List<int> selfList = new();
-    public List<int> loveList = new();
-
     public int temp = 0;
     public bool answered = false;
 
@@ -56,11 +46,15 @@ public class Player : MonoBehaviourPunCallbacks
         {
             if (Input.GetMouseButtonDown(0) && gameController.questionAsked == false)
             {
+                Debug.Log("hitting out");
                 Ray ray = cam.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 Physics.Raycast(ray, out hit);
+
+                //if (hit.collider.CompareTag("Block") && nickName == (string)PhotonNetwork.CurrentRoom.CustomProperties["Turn"])
                 if (hit.collider.CompareTag("Block") && nickName == startGame.turnName)
                 {
+                    Debug.Log("hitting");
                     int viewID = hit.collider.GetComponent<PhotonView>().ViewID;
                     view.RPC(nameof(DisableBlock), RpcTarget.AllBuffered, viewID);
                     view.RPC(nameof(GameOver), RpcTarget.AllBuffered, PhotonNetwork.NickName);
@@ -113,34 +107,9 @@ public class Player : MonoBehaviourPunCallbacks
                 ques = questionsHolder.selfQuestions.question[temp];
                 break;
         }
-        gameController.AskQuestion(_block,ques);
+        gameController.AskQuestion(_block, ques);
         questionsHolder.view.RPC(nameof(questionsHolder.SyncValues), RpcTarget.AllBuffered, _block, temp);
     }
-
-    [PunRPC]
-    public void UpdateFamily(int _temp)
-    {
-        familyList.Add(_temp);
-    }
-
-    [PunRPC]
-    public void UpdateWork(int _temp)
-    {
-        workList.Add(_temp);
-    }
-
-    [PunRPC]
-    public void UpdateLove(int _temp)
-    {
-        loveList.Add(_temp);
-    }
-
-    [PunRPC]
-    public void UpdateSelf(int _temp)
-    {
-        selfList.Add(_temp);
-    }
-
 
     public void UpodateList()
     {

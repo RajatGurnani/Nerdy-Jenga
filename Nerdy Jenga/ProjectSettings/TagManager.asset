@@ -7,6 +7,8 @@ TagManager:
   - Block
   - Boom
   - Turn
+  - Ready
+  - ReadyCanvas
   layers:
   - Default
   - TransparentFX
