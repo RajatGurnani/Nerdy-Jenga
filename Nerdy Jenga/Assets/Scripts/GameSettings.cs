@@ -8,6 +8,5 @@ public class GameSettings : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
-        //Screen.SetResolution(720, 1280, false);
     }
 }

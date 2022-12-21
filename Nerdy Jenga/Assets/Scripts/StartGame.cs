@@ -5,6 +5,7 @@ using TMPro;
 using Photon.Pun;
 using System.Linq;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
@@ -71,7 +72,7 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
         int length = PhotonNetwork.PlayerList.Length;
         if (playerCount != PhotonNetwork.PlayerList.Length)
         {
-            view.RPC(nameof(ConnectNewPlayer),RpcTarget.AllBuffered);
+            view.RPC(nameof(ConnectNewPlayer), RpcTarget.AllBuffered);
             ConnectNewPlayer();
             playerCount = length;
         }
@@ -131,5 +132,28 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
         turnName = temp;
         PhotonNetwork.CurrentRoom.SetCustomProperties(new ExitGames.Client.Photon.Hashtable { { "Turn", temp } });
         turnText.text = $"{temp}'s turn";
+    }
+
+
+    public override void OnPlayerLeftRoom(Photon.Realtime.Player otherPlayer)
+    {
+        playerQueue = new Queue<string>(playerQueue.Where(x => x != otherPlayer.NickName));
+        if ((string)PhotonNetwork.CurrentRoom.CustomProperties["Turn"] == otherPlayer.NickName)
+        {
+            view.RPC(nameof(StartTurn), RpcTarget.AllBuffered);
+        }
+    }
+
+    public void ReturnToMenu()
+    {
+        view.RPC(nameof(KickAll), RpcTarget.AllBuffered);
+    }
+
+
+    [PunRPC]
+    public void KickAll()
+    {
+        PhotonNetwork.LeaveRoom();
+        SceneManager.LoadScene("Lobby");
     }
 }
