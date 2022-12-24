@@ -7,6 +7,7 @@ using TMPro;
 using System.Linq;
 using UnityEngine.LowLevel;
 using JetBrains.Annotations;
+using UnityEngine.InputSystem.HID;
 
 public class Player : MonoBehaviourPunCallbacks
 {
@@ -24,6 +25,8 @@ public class Player : MonoBehaviourPunCallbacks
     public bool answered = false;
 
     public CommonQuestionsHolder questionsHolder;
+    public Helper.BlockType blockTemp;
+    public string quesTemp ="";
 
     private void Awake()
     {
@@ -107,8 +110,15 @@ public class Player : MonoBehaviourPunCallbacks
                 ques = questionsHolder.selfQuestions.question[temp];
                 break;
         }
-        gameController.AskQuestion(_block, ques);
+        blockTemp = _block;
+        quesTemp = ques;
+        Invoke(nameof(QuestionTemp), 1.5f);
         questionsHolder.view.RPC(nameof(questionsHolder.SyncValues), RpcTarget.AllBuffered, _block, temp);
+    }
+
+    public void QuestionTemp()
+    {
+        gameController.AskQuestion(blockTemp, quesTemp);
     }
 
     public void UpodateList()
@@ -135,6 +145,9 @@ public class Player : MonoBehaviourPunCallbacks
     [PunRPC]
     public void DisableBlock(int playerViewID)
     {
-        PhotonView.Find(playerViewID).gameObject.SetActive(false);
+        JengaBlock temp=PhotonView.Find(playerViewID).gameObject.GetComponent<JengaBlock>();
+        temp.animator.enabled = true;
+        temp.audioSource.Play();
+        Destroy(temp.gameObject,1f);
     }
 }

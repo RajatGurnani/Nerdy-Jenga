@@ -153,7 +153,8 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
     [PunRPC]
     public void KickAll()
     {
+        Debug.Log("Exit");
         PhotonNetwork.LeaveRoom();
-        SceneManager.LoadScene("Lobby");
+        Application.Quit();
     }
 }

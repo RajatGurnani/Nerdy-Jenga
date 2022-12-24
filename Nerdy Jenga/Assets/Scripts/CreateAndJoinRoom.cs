@@ -11,11 +11,25 @@ public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
     public InputField roomName;
     public string defaultRoomName = "Room";
     public const string KEY = "KEY";
+    public string abcd = "abcdefghijklmmnopqrtsuvwxyz1234567890";
+    public int passLength = 5;
 
     private void Start()
     {
+        MakeRandomRoom();
         roomName.text = defaultRoomName;
-        //roomName.text = "nerdy";
+    }
+
+    /// <summary>
+    /// Generates a random room name for the player to use
+    /// </summary>
+    public void MakeRandomRoom()
+    {
+        defaultRoomName = "";
+        for (int i = 0; i < passLength; i++)
+        {
+            defaultRoomName += abcd[Random.Range(0, abcd.Length)];
+        }
     }
 
     public void CreateRoom()

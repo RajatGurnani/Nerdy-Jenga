@@ -55,6 +55,8 @@ MonoBehaviour:
   temp: 0
   answered: 0
   questionsHolder: {fileID: 0}
+  blockTemp: 0
+  quesTemp: 
 --- !u!114 &6407509345709732324
 MonoBehaviour:
   m_ObjectHideFlags: 0

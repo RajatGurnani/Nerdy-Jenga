@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
     public Sprite loveSprite;
     public Sprite workSprite;
     public Sprite selfSprite;
+    public AudioSource questionAudio;
 
     public Button answerButton;
     public TMP_Text readyText;
@@ -106,6 +107,7 @@ public class GameController : MonoBehaviour
     [PunRPC]
     public void AskQuestionToAll(Helper.BlockType _block,string question)
     {
+        questionAudio.Play();
         questionTypeText.text = _block.ToString();
         switch (_block)
         {

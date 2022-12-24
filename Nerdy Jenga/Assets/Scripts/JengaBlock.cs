@@ -9,6 +9,10 @@ public class JengaBlock : MonoBehaviourPunCallbacks
     public Helper.BlockType blockType;
     public PhotonView view;
     public MeshRenderer meshRenderer;
+    public Animator animator;
+    public AudioSource audioSource;
+    public AudioClip endClip;
+
     public Material familyMaterial;
     public Material workMaterial;
     public Material loveMaterial;
@@ -19,6 +23,8 @@ public class JengaBlock : MonoBehaviourPunCallbacks
     public float fallValue = 1;
     public bool fall = false;
     public GameObject boom;
+    public bool gameOver = false;
+
 
     private void Awake()
     {
@@ -52,7 +58,9 @@ public class JengaBlock : MonoBehaviourPunCallbacks
     [PunRPC]
     void EndGame()
     {
+        audioSource.PlayOneShot(endClip, 0.01f);
         boom.transform.GetChild(2).gameObject.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public Material SetMaterial(Helper.BlockType blockType = Helper.BlockType.Family)
