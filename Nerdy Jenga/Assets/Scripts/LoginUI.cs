@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class LoginUI : MonoBehaviour
 {
@@ -13,7 +15,23 @@ public class LoginUI : MonoBehaviour
 
     private void Start()
     {
+        LoginWithCustomIDRequest request = new LoginWithCustomIDRequest
+        {
+            CustomId = SystemInfo.deviceUniqueIdentifier,
+            CreateAccount = true
+        };
+        PlayFabClientAPI.LoginWithCustomID(request, OnSuccessfulLogin, OnError);
         identification = Identification.Instance;
+    }
+
+    public void OnSuccessfulLogin(LoginResult result)
+    {
+
+    }
+
+    public void OnError(PlayFabError error)
+    {
+
     }
 
     public void UpdateUI()

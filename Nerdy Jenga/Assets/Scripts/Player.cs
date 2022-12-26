@@ -44,12 +44,10 @@ public class Player : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        Debug.Log(answered);
         if (view.IsMine)
         {
             if (Input.GetMouseButtonDown(0) && gameController.questionAsked == false)
             {
-                Debug.Log("hitting out");
                 Ray ray = cam.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
                 Physics.Raycast(ray, out hit);
@@ -61,7 +59,7 @@ public class Player : MonoBehaviourPunCallbacks
                     int viewID = hit.collider.GetComponent<PhotonView>().ViewID;
                     view.RPC(nameof(DisableBlock), RpcTarget.AllBuffered, viewID);
                     view.RPC(nameof(GameOver), RpcTarget.AllBuffered, PhotonNetwork.NickName);
-                    startGame.view.RPC(nameof(startGame.StartTurn), RpcTarget.AllBuffered);
+                    //startGame.view.RPC(nameof(startGame.StartTurn), RpcTarget.AllBuffered);
                     AskQuestion(hit.collider.GetComponent<JengaBlock>().blockType);
                 }
             }

@@ -5,7 +5,8 @@ using TMPro;
 using Photon.Pun;
 using System.Linq;
 using Photon.Realtime;
-using UnityEngine.SceneManagement;
+using PlayFab;
+using PlayFab.ClientModels;
 
 public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
@@ -22,6 +23,7 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
     public Player[] playersArr;
     List<ReadyCheck> readyChecks = new();
     public string turnName;
+    public string nextTurnName;
     public Queue<string> playerNames;
 
     public bool gameStarted = false;
@@ -58,11 +60,13 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
         {
             if (check.readyInLobby)
             {
-                playerNamesText.text += $"\u2022<indent=1em> <color=green>{check.view.Owner.NickName}</color> </indent>\n";
+                //playerNamesText.text += $"\u2022<indent=1em> <color=green>{check.view.Owner.NickName}</color> </indent>\n";
+                playerNamesText.text += $"<sprite name=\"tick\"> {check.view.Owner.NickName}\n";
             }
             else
             {
-                playerNamesText.text += $"\u2022<indent=1em> <color=red>{check.view.Owner.NickName}</color> </indent>\n";
+                //playerNamesText.text += $"\u2022<indent=1em> <color=red>{check.view.Owner.NickName}</color> </indent>\n";
+                playerNamesText.text += $"<sprite name=\"cross\"> {check.view.Owner.NickName}\n";
             }
         }
     }
@@ -90,10 +94,25 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
     {
         if (view.IsMine && PhotonNetwork.IsMasterClient)
         {
+            PhotonNetwork.CurrentRoom.CustomProperties["startTime"] = (int)PhotonNetwork.Time;
             gameStarted = true;
             Photon.Realtime.Player[] pList = PhotonNetwork.PlayerList;
+            RegisterLobby(pList.Length);
             view.RPC(nameof(SetSpawnManager), RpcTarget.AllBuffered);
         }
+    }
+
+    public void RegisterLobby(int count)
+    {
+        WriteTitleEventRequest request = new WriteTitleEventRequest()
+        {
+            Body = new Dictionary<string, object>()
+            {
+            { "Hotel_Name",count}
+            },
+            EventName = "Table_Size"
+        };
+        PlayFabClientAPI.WriteTitleEvent(request, success => Debug.Log("success"), error => Debug.Log("error"));
     }
 
     public void UpdatePlayerList()
@@ -125,13 +144,11 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
     [PunRPC]
     public void StartTurn()
     {
-        string temp = playerQueue.Dequeue();
-        Debug.Log(temp + "-" + playerQueue.Count);
-        playerQueue.Enqueue(temp);
-        Debug.Log(temp + "-" + playerQueue.Count);
-        turnName = temp;
-        PhotonNetwork.CurrentRoom.SetCustomProperties(new ExitGames.Client.Photon.Hashtable { { "Turn", temp } });
-        turnText.text = $"{temp}'s turn";
+        turnName = playerQueue.Dequeue();
+        playerQueue.Enqueue(turnName);
+        nextTurnName=playerQueue.Peek();
+        PhotonNetwork.CurrentRoom.SetCustomProperties(new ExitGames.Client.Photon.Hashtable { { "Turn", turnName } });
+        turnText.text = $"{turnName}'s turn";
     }
 
 
@@ -155,6 +172,6 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
     {
         Debug.Log("Exit");
         PhotonNetwork.LeaveRoom();
-        Application.Quit();
+        //Application.Quit();
     }
 }

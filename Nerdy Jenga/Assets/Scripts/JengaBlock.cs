@@ -1,8 +1,6 @@
 using Photon.Pun;
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine;
 
 public class JengaBlock : MonoBehaviourPunCallbacks
 {
@@ -58,8 +56,8 @@ public class JengaBlock : MonoBehaviourPunCallbacks
     [PunRPC]
     void EndGame()
     {
-        audioSource.PlayOneShot(endClip, 0.01f);
-        boom.transform.GetChild(2).gameObject.SetActive(true);
+        audioSource.PlayOneShot(endClip, 0.1f);
+        boom.transform.GetChild(4).gameObject.SetActive(true);
         Time.timeScale = 0f;
     }
 

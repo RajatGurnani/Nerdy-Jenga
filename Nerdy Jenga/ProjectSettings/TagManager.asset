@@ -9,6 +9,7 @@ TagManager:
   - Turn
   - Ready
   - ReadyCanvas
+  - QScreen
   layers:
   - Default
   - TransparentFX

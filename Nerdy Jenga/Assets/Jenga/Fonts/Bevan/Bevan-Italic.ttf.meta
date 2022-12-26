@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8b4531143a7a23640a9afbde3af60988
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Bevan
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 75c5aedf1d34e2c4bb9a6691d0d07e21, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
