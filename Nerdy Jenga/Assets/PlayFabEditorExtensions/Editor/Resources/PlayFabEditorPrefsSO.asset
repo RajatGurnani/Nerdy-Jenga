@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
   DevAccountEmail: cheena.rajat@gmail.com
-  DevAccountToken: h37r4gh5qo5stwcunbmmnjrtnjzxeb1r63uwk4p9mzubwjpqgnn7ei45gyqnbqqjpi8ns75jcyfx3jeee5bw48ua33jdfrfxsu5hpaj1db97yhatbqhpbxbg51b3rb6fppwgk1q44snhtmcjk8na7zyzbgoddgd599c3k7433x6x5xafn4z1i8yqd9sr9c36fd5368uw
+  DevAccountToken: 9txp38jjqfqipbqhuhjmjwaq5ryj75ymch3adkoz4s6oyqwhxcikfcosbdkwxra1mtbtktxdjotj4kwkx7ck4zq5srcehn69jztfqdi9je8qqfjjoafkgr17h94wuwhg3pktqyoe5h7fnz4wm3dndsyttuh1jtfbqiepn7393rbb3eirco1ppb6fd57xttcns8ypywzx
   AadAuthorization: 
-  SelectedStudio: 
+  SelectedStudio: Nerdy Quest
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 

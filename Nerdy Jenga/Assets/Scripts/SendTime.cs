@@ -8,7 +8,6 @@ using TMPro;
 
 public class SendTime : MonoBehaviour
 {
-    public string url;
     public StartGame startGame;
     public HotelInformation hotelInfo;
 
@@ -24,8 +23,11 @@ public class SendTime : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             Send();
-            startGame.ReturnToMenu();
         }
+    }
+    private void Start()
+    {
+        PhotonNetwork.Disconnect();
     }
 
     private void Update()
@@ -63,6 +65,6 @@ public class SendTime : MonoBehaviour
 
     public void OpenURL()
     {
-        Application.OpenURL(url);
+        Application.OpenURL(hotelInfo.url);
     }
 }

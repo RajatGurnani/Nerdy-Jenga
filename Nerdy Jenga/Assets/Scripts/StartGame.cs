@@ -10,6 +10,8 @@ using PlayFab.ClientModels;
 
 public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
+    public TMP_Text roomNameText;
+
     public TMP_Text playerNamesText;
     public List<Photon.Realtime.Player> players = new List<Photon.Realtime.Player>();
     public List<string> names = new List<string>();
@@ -35,6 +37,11 @@ public class StartGame : MonoBehaviourPunCallbacks, IInRoomCallbacks
     {
         view = GetComponent<PhotonView>();
         turnText = GameObject.FindGameObjectWithTag("Turn").GetComponent<TMP_Text>();
+    }
+
+    private void Start()
+    {
+        roomNameText.text = $"Room Name: {PhotonNetwork.CurrentRoom.Name}";
     }
 
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)

@@ -15,6 +15,7 @@ MonoBehaviour:
   hotelName: Miguel's Cocktails and Petiscos
   hotelDescription: 
   hotelType: 
+  url: https://www.miguels.in/menu/
   items: []
   drinks:
   - The Classic Martini

@@ -42,7 +42,7 @@ public class LoginUI : MonoBehaviour
             return;
         }
 
-        outputText.text = "Logged in as " + field.text;
+        outputText.text = "Successfully logged in as " + field.text;
         identification.UpdateName(field.text);
         connectToServer.Connect();
     }
