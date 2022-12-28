@@ -406,8 +406,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4290663284
-  m_fontColor: {r: 0.45454204, g: 0.32694018, b: 0.745283, a: 1}
+    rgba: 4294216192
+  m_fontColor: {r: 0, g: 0.5411765, b: 0.95686275, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3819,22 +3819,23 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\\u2022<indent=1em>Blocks are stacked onto each other in the Jenga Tower
     formation \r</indent>\n\\u2022<indent=1em>Each block represents the following
-    set of questions:\n\\u2022<indent=1em>\tBlue - Self \r</indent>\n\\u2022<indent=1em>\tYellow
-    - Family \r</indent>\n\\u2022<indent=1em>\tOrange - Love \r</indent>\n\\u2022<indent=1em>\tGreen
-    - Work</indent></indent>\n\\u2022<indent=1em>Each turn, players would carefully
-    remove a block and ask the question on the block to the rest of the players\r
-    \r</indent>\n\\u2022<indent=1em>Upon answering the questions, each player would
-    have to press the \u201CDONE\u201D to start the next turn\r \r</indent>\n"
+    set of questions:\n\\u2022<indent=1em>\tBlue - <color=#93bff5>Self</color> \r</indent>\n\\u2022<indent=1em>\tYellow
+    - <color=#f5f251>Family</color> \r</indent>\n\\u2022<indent=1em>\tOrange - <color=#f57f64>Love</color>
+    \r</indent>\n\\u2022<indent=1em>\tGreen - <color=#55fabf>Work</color></indent></indent>\n\\u2022<indent=1em>Each
+    turn, players would carefully remove a block and ask the question on the block
+    to the rest of the players\r \r</indent>\n\\u2022<indent=1em>Upon answering the
+    questions, each player would have to press the \u201CDONE\u201D to start the
+    next turn\r \r</indent>\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 58ecc6f5987c860499d985edf3a3b253, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 52b08e4648f59ff4184c5330079ec139, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: e958365d22096f240a7df2198a6f9572, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5579,10 +5580,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3625442777945962741, guid: c2af685b19c30e245bfaea62f12c1668,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1776277469}
-    - targetCorrespondingSourceObject: {fileID: 3625442777945962741, guid: c2af685b19c30e245bfaea62f12c1668,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 478715069}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2af685b19c30e245bfaea62f12c1668, type: 3}
@@ -6665,7 +6662,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Scan the QR<sprite name=\"qr_code\">\n code on the \ntable"
+  m_text: "Scan the QR<sprite name=\"qr_code\"> code\n on the table to\n play again"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 454d64bd34fd2e045a569f7dc7501914, type: 2}
   m_sharedMaterial: {fileID: 5720378608151117098, guid: 454d64bd34fd2e045a569f7dc7501914,
@@ -7215,105 +7212,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1758681034}
   m_CullTransparentMesh: 1
---- !u!1001 &1776277468
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1457821741}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3125
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.25
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3125
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.57
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_Name
-      value: SleepiingCat
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 18cf2d530eaacf74facd799d54bc63a9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18cf2d530eaacf74facd799d54bc63a9, type: 3}
---- !u!4 &1776277469 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 18cf2d530eaacf74facd799d54bc63a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1776277468}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1800062753
 PrefabInstance:
   m_ObjectHideFlags: 0
