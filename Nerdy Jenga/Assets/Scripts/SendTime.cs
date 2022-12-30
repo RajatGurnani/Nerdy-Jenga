@@ -19,7 +19,8 @@ public class SendTime : MonoBehaviour
 
     private void OnEnable()
     {
-        ChangeHotelInfo();
+        messageText.text = hotelInfo.GiveMessage();
+        //ChangeHotelInfo();
         if (PhotonNetwork.IsMasterClient)
         {
             Send();
@@ -34,7 +35,7 @@ public class SendTime : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ChangeHotelInfo();
+            messageText.text = hotelInfo.GiveMessage();
         }
     }
 

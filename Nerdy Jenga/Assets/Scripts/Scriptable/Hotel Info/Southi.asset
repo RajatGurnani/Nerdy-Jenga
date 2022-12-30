@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076890a70ce3afe4f9de6d4087cfa89b, type: 3}
+  m_Name: Southi
+  m_EditorClassIdentifier: 
+  hotelName: Southi
+  hotelDescription: 
+  hotelType: 
+  url: https://drive.google.com/drive/folders/1PBrZ94QDQfOs_XoRpJQF0tCFydlWnuO7
+  highlightColor: {r: 1, g: 0.9529412, b: 0.09019608, a: 1}
+  choice: 1
+  drinks:
+  - Fresh Fruits Martini's
+  - Kiss Baby
+  - Woo Woo
+  - Robinhood
+  - Cosmopolitan
+  - Margarita (Flavoured)
+  - Daiquiri (Flavoured)
+  - Barman Special
+  - Long Island Ice Tea
+  - Long Beach Ice Tea
+  - Sex On The Beach
+  - Pina Colada
+  - Sea Breeze
+  - Madras Breeze
+  - Mojito
+  - Caipiroska
+  - Whisky Sour
+  - Manhattan
+  - Chocolate Banana
+  - Chocolate Tini
+  - White Russian
+  - Shooter B-52
+  - Jager Bomb
+  - Avocado Margarita
+  - Avocado Martini
+  - Avocado Southi Spl
+  - Avocado Daiquiri
+  - Avocado Colada
+  - Red & White Sangria
+  - Italian Kiss
+  - Banana Smoothie
+  - Peach Delight
+  - Virgin Pina Colada
+  - Virgin Mojito Flavoured
+  - Virgin Fresh Fruit Martini
+  - Avocado Smoothie
+  - Avocado Creamy Juice
+  - Avocado Milkshake
+  - Avocado Southi SPL
+  - Cookie Dough Shake
+  - Browine Fundge Shake
+  - Kitkat Shake
+  - Chocolate Chip Shake
+  - Oreo Shake
+  - Lotus Biscoff Shake
+  - Sunshine Shake
+  - Kooky Caramel Shake
+  - Kitkat Shake
+  drinkMessage:
+  - Step back in time with a sip of {0}!
+  - Experience the glamour of the Roaring Twenties with a {0}!
+  - Embrace the sophistication of the art deco era with a {0}!
+  - Indulge in the decadence of the past with a {0}!
+  - A {0} for a night of glamour and elegance!
+  - Elevate your evening with a {0}!
+  - Add some vintage flair to your evening with a {0}!
+  - Get ready to raise a glass to the golden age with a {0}!
+  - Celebrate the glamour of the art deco era with a {0}!
+  - Transport yourself to the opulence of the past with a {0}!
+  food:
+  - Garlic Braed/Cheese Garlic Bread
+  - Spicy Loaded Fries
+  - Mr.Bean Nachos
+  - Chilly Cheese Finger
+  - French Fries With Aioli
+  - Crispy Garlic Baked Potato Wedges
+  - Fresco Fried Chicken
+  - Tuna Salad With Pita
+  foodMessage:
+  - Indulge in the savoury goodness of {0}
+  - Experience culinary heaven with {0}
+  - Treat yourself to the ultimate {0} experience
+  - Satisfy your cravings with a hearty serving of {0}
+  - Get your taste buds tingling with our famous {0}
+  - Take a bite out of our delicious {0}
+  - Unleash your inner foodie with {0}
+  - Elevate your meal with our mouth-watering {0}
+  - Tantalize your taste buds with {0}
+  - Savor the flavour of our signature {0}
+  - Get your fix of {0}- you won't be disappointed!
+  - Try our {0}- it's a game-changer!
+  - Don't miss out on the {0} craze - order now!
+  - Step up your dining game with {0}
+  - Discover the magic of {0}
+  - Get your {0} fix and thank me later
+  - Our {0} will transport you to flavour town
+  - Satisfy your {0} cravings in style
+  - Bring the {0} party to your palate
+  - Get ready for some {0} goodness
+  - Our {0} will make your taste buds dance
+  - Try our {0} and taste the difference
+  - Feast on our delectable {0}
+  - Indulge in the flavours of {0}
+  - Treat yourself to our heavenly {0}
+  - Savor the taste of {0}
+  - Our {0} is a must-try for any foodie
+  - Dive into the flavours of {0}
+  - Get your taste buds ready for {0}
+  - Our {0} will take your taste buds on a journey
+  - Get your {0}fix and elevate your meal
+  - Experience the magic of {0}
+  - Indulge in the deliciousness of {0}
+  - Satisfy your cravings with our mouth-watering {0}
+  - Treat yourself to the ultimate {0} experience
+  - Try our {0} and taste the difference

@@ -16,7 +16,8 @@ MonoBehaviour:
   hotelDescription: 
   hotelType: 
   url: https://www.miguels.in/menu/
-  items: []
+  highlightColor: {r: 1, g: 0.9529412, b: 0.09019608, a: 1}
+  choice: 1
   drinks:
   - The Classic Martini
   - Bellini
@@ -38,3 +39,5 @@ MonoBehaviour:
   - Get ready to raise a glass to the golden age with a {0}!
   - Celebrate the glamour of the art deco era with a {0}!
   - Transport yourself to the opulence of the past with a {0}!
+  food: []
+  foodMessage: []

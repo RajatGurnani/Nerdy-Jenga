@@ -903,7 +903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGame: {fileID: 1513963267}
-  hotelInfo: {fileID: 11400000, guid: 1b377ce592336b346b1a804992c7f1d3, type: 2}
+  hotelInfo: {fileID: 11400000, guid: 6be25b48de2ffd94aa30635085381960, type: 2}
   messageText: {fileID: 286325500}
   drink: 
   drinkMessage: 
