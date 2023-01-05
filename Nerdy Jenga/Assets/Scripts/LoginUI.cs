@@ -12,12 +12,24 @@ public class LoginUI : MonoBehaviour
     public TMP_Text outputText;
     Identification identification;
     public ConnectToServer connectToServer;
+    public string id = "";
+    public const string UNIQUE_ID = "UNIQUE_ID";
+
+    private void Awake()
+    {
+        if (!PlayerPrefs.HasKey(UNIQUE_ID))
+        {
+            PlayerPrefs.SetString(UNIQUE_ID, System.Guid.NewGuid().ToString());
+            PlayerPrefs.Save();
+        }
+        id = PlayerPrefs.GetString(UNIQUE_ID);
+    }
 
     private void Start()
     {
         LoginWithCustomIDRequest request = new LoginWithCustomIDRequest
         {
-            CustomId = SystemInfo.deviceUniqueIdentifier,
+            CustomId = id,
             CreateAccount = true
         };
         PlayFabClientAPI.LoginWithCustomID(request, OnSuccessfulLogin, OnError);
@@ -26,12 +38,12 @@ public class LoginUI : MonoBehaviour
 
     public void OnSuccessfulLogin(LoginResult result)
     {
-
+        Debug.Log("success- " + id);
     }
 
     public void OnError(PlayFabError error)
     {
-
+        Debug.Log("error- " + error.ToString());
     }
 
     public void UpdateUI()
