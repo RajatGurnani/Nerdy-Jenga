@@ -68,4 +68,9 @@ public class SendTime : MonoBehaviour
     {
         Application.OpenURL(hotelInfo.url);
     }
+
+    public void OpenReviewURL()
+    {
+        Application.OpenURL(hotelInfo.reviewUrl);
+    }
 }

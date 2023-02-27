@@ -9,6 +9,7 @@ public class HotelInformation : ScriptableObject
     public string hotelDescription;
     public string hotelType;
     public string url;
+    public string reviewUrl;
     public Color highlightColor;
 
     public enum Choice { Food, Drink, FoodNDrink };
