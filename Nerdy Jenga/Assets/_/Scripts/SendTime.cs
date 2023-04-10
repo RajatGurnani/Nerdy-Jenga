@@ -30,18 +30,16 @@ public class SendTime : MonoBehaviourPunCallbacks
     private void Awake()
     {
         messageText.text = hotelInfo.GiveMessage();
-        //ChangeHotelInfo();
         if (PhotonNetwork.IsMasterClient)
         {
-            //Send();
+            Send();
         }
     }
 
     private void Start()
     {
+        Destroy(FindObjectOfType<MenuReviewPopup>().gameObject);
         PhotonNetwork.LeaveRoom();
-        //StartCoroutine(nameof(DisconnectAndLoad));
-        //PhotonNetwork.Disconnect();
     }
 
     public override void OnLeftRoom()
@@ -91,5 +89,11 @@ public class SendTime : MonoBehaviourPunCallbacks
     public void LoadLobby()
     {
         SceneManager.LoadScene(Scenes.Lobby);
+    }
+
+    public void LoadDinelift()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene(Scenes.MainMenu);
     }
 }

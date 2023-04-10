@@ -14,6 +14,16 @@ public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
     public string abcd = "abcdefghijklmmnopqrtsuvwxyz1234567890";
     public int passLength = 5;
 
+    public GameObject menuReviewPopup;
+
+    private void Awake()
+    {
+        if (FindObjectOfType<MenuReviewPopup>() == null)
+        {
+            menuReviewPopup.SetActive(true);
+        }
+    }
+
     private void Start()
     {
         MakeRandomRoom();
@@ -35,7 +45,7 @@ public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
     public void CreateRoom()
     {
         RoomOptions room = new RoomOptions();
-        room.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable { { KEY, Random.Range(0, 10000) }, { "Turn", "" },{ "startTime","" } };
+        room.CustomRoomProperties = new ExitGames.Client.Photon.Hashtable { { KEY, Random.Range(0, 10000) }, { "Turn", "" }, { "startTime", "" } };
         PhotonNetwork.CreateRoom(roomName.text, room);
     }
 

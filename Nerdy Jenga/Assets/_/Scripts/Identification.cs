@@ -19,12 +19,12 @@ public class Identification : MonoBehaviour
         }
     }
 
-    private void OnGUI()
-    {
-        GUIStyle style = GUI.skin.box;
-        style.fontSize = 30;
-        GUI.Button(new Rect(400, 100, 700, 100), $"{uniqueID}", style);
-    }
+    //private void OnGUI()
+    //{
+    //    GUIStyle style = GUI.skin.box;
+    //    style.fontSize = 30;
+    //    GUI.Button(new Rect(400, 100, 700, 100), $"{uniqueID}", style);
+    //}
 
     void Start()
     {
